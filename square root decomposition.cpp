@@ -29,6 +29,7 @@ int query(int l, int r)
     return sum;
 }
 
+
 /// For Range Update
 
 void update(int l, int r, int x)
