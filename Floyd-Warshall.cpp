@@ -8,20 +8,10 @@ typedef long long ll;
 #define INF 1e18
 int n, m;
 
-ll dist[MAX_N][MAX_N];
 ll flojd[MAX_N][MAX_N];
-
 
 inline void FloydWarshall()
 {
-    for (int i=1;i<=n;i++)
-    {
-        for (int j=1;j<=n;j++)
-        {
-            flojd[i][j] = (dist[i][j] > 0 ? dist[i][j] : INF);
-        }
-        //flojd[i][i] = 0;
-    }
     for (int k=1;k<=n;k++)
     {
         for (int i=1;i<=n;i++)
@@ -41,13 +31,32 @@ int main()
 {
     int u, v, w;
     cin >> n >> m;
+    
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=1; j<=n; j++)
+        {
+            flojd[i][j] = INF;
+            if(i==j) flojd[i][j] = 0;
+        }
+    }
+    
     for(int i=0; i<m; i++)
     {
         cin >> u >> v >> w;
-        dist[u][v] = w;
-        dist[v][u] = w; //If the graph is undirected
+        flojd[u][v] = w;
+        flojd[v][u] = w; //If the graph is undirected
     }
     FloydWarshall();
+    bool negCycle = false;
+    
+    for(int i=1; i<=n; i++)
+    {
+        if(flojd[i][i] < 0)
+        {
+            negCycle = true; //Negative cycle detected
+        }
+    }
     printf("%d\n",flojd[1][n]);
     return 0;
 }
