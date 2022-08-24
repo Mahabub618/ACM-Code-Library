@@ -20,7 +20,10 @@ void dfs(int u, vector<int> &disc, vector<int> &low, stack<int> &mystack, vector
             low[u] = min(low[u], low[v]);
         }
         else if(presentStack[v]) low[u] = min(low[u], disc[v]); // (u, v) are back-edge
-        //else (u, v) are cross-edge
+        else
+        {
+            // (u, v) are cross-edge
+        }
     }
     if(low[u] == disc[u])
     {
