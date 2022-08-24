@@ -1,8 +1,4 @@
-#include<bits/stdc++.h>
-using namespace std;
 const int N = 2e5+5;
-#define pb push_back
-
 vector<int> g[N];
 int timer, n, m;
 void dfs(int u, vector<int> &disc, vector<int> &low, stack<int> &mystack, vector<bool> &presentStack)
