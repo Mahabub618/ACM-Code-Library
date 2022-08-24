@@ -29,8 +29,7 @@ void dfs(int u, int p)
     if(p == -1 and children > 1)
     {
         is_ArticulationPoint(u);
-    }
-    
+    }  
 }
 void find_cutpoints()
 {
