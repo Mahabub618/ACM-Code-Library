@@ -58,7 +58,6 @@ int main()
         int u, v;
         cin >> u >> v;
         g[u].pb(v);
-        g[v].pb(u); // For bi-directional
     }
     Tarjan();
 }
