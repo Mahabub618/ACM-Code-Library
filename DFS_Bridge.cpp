@@ -22,7 +22,7 @@ void dfs(int u, int p, int d) {
             }
         }
     }
-    if(low[u] < depth[u]) {
+    if(low[u] > depth[u]) {
         /// p - u edge is a bridge
     }
 }
