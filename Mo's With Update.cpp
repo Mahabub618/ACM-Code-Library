@@ -140,7 +140,6 @@ int main()
     for(int i=0; i<j; i++)
     {
         int l = Q[i].l, r = Q[i].r, t = Q[i].upd_cnt;
-        //debug3(l, r, t);
         while(cur < t)
         {
             cur++;
