@@ -38,11 +38,12 @@ void find_cutpoints()
     {
         vis[i] = is_cut[i] = 0;
         depth[i] = low[i] = -1;
-        g[i].clear();
+        g[i].clear(); // Declared it into the main function, before inputting graph
     }
     for(int i=1; i<=n; i++)
     {
-        if(vis[i]) dfs(i, -1);
+        if(!vis[i]) dfs(i, -1);
     }
 }
 /// O(V+E)
+/// https://www.spoj.com/problems/SUBMERGE/
