@@ -108,3 +108,4 @@ void add_edge(int a, int b) {
         merge_path(a, b);
     }
 }
+///https://www.spoj.com/problems/ONBRIDGE/
