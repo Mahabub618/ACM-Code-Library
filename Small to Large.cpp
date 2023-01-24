@@ -44,3 +44,5 @@ int main()
 return 0;
 }
 // Number of distinct value in a subtree
+// https://codeforces.com/contest/600/problem/E
+// https://toph.co/p/mangosmash
