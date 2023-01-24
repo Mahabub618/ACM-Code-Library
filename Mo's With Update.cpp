@@ -134,7 +134,7 @@ int main()
             aux[l] = mp[r];
         }
     }
-    blk_sz = sqrt(n);
+    blk_sz = pow(n, 0.666666);
     sort(Q, Q+j);
     int cur = 0;
     for(int i=0; i<j; i++)
@@ -164,4 +164,5 @@ int main()
      
 return 0;
 }
-///https://toph.co/p/distinct-dishting
+/// https://toph.co/p/distinct-dishting
+/// https://www.spoj.com/problems/ADAUNIQ/
