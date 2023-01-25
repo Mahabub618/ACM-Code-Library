@@ -6,7 +6,7 @@ int depth[N], par[N][20];
 vector<int> g[N];
 int kth_parent(int u, int k)
 {
-    for(int b = 20; b>=0; b--)
+    for(int b = 19; b>=0; b--)
     {
         if((k >> b) & 1) u = par[u][b];
     }
@@ -20,7 +20,7 @@ int LCA(int u, int v)
     if(u == v) return v;
     else
     {
-        for(int k=20; k>=0; k--)
+        for(int k=19; k>=0; k--)
         {
             if(par[u][k] != par[v][k] and par[u][k] != -1)
             {
