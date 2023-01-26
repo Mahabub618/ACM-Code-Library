@@ -203,5 +203,6 @@ int main()
      MO();
 return 0;
 }
+//https://www.spoj.com/problems/COT2/ (Better Implementation)
 //Prob link: https://toph.co/contests/training/ucyhd4j
 //Algo link: https://codeforces.com/blog/entry/43230
