@@ -1,3 +1,4 @@
+/// Version-1
 #include<bits/stdc++.h>
 using namespace std;
 int n, a[21];
@@ -27,6 +28,15 @@ int main()
     Generate(0);
 }
 
+/// Version-2
+for(int i=0; i<(1<<n); i++)
+{
+  ll sum = 0;
+  for(int j=0; j<n; j++)
+  {
+    if(i&(1<<j)) sum += v[j];
+  }
+}
 
 /// M digit of 1's on N
 
